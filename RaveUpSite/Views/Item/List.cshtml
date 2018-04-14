@@ -1,0 +1,9 @@
+﻿@model IEnumerable<Item>
+@foreach (var i in Model)
+{
+    <div>
+        <h3>@i.Name</h3>
+        @i.Description
+        <h4>@i.Square</h4>
+    </div>
+}
