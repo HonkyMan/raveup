@@ -2,7 +2,7 @@
 .main{
     height: 100vh;
 }
-h1{
+h1, h2{
     text-align: center;
 }
 a:hover{
@@ -107,6 +107,14 @@ li{
     display:block;
 }
 /*range block*/
+
+/*Form*/
+.form-signin{
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+/*end form*/
 
 /*footer*/
 footer{
