@@ -11,7 +11,7 @@ using System;
 namespace RaveUpSite.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20180414165620_Initial")]
+    [Migration("20180414171905_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
