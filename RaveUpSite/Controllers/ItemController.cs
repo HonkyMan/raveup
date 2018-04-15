@@ -9,6 +9,7 @@ namespace RaveUpSite.Controllers
 {
     public class ItemController : Controller
     {
+        
         private IItemRepository repository;
         public ItemController(IItemRepository repo)
         {
@@ -16,5 +17,7 @@ namespace RaveUpSite.Controllers
         }
 
         public ViewResult List() => View(repository.Items);
+
+
     }
 }

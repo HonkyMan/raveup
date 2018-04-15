@@ -14,23 +14,20 @@ namespace RaveUpSite
 {
     public class Startup
     {
-        IConfigurationRoot Configuration;
-
-        public Startup(IHostingEnvironment env)
+        IConfiguration configuration;
+        
+        public Startup(IConfiguration conf)
         {
-            Configuration = new ConfigurationBuilder()
-                .SetBasePath(env.ContentRootPath)
-                .AddJsonFile("appsettings.json")
-                .Build();
-
+            configuration = conf;
         }
+
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
-                    Configuration["Data:RaveUp:ConnectionString"])
+                    configuration["Data:RaveUp:ConnectionString"])
                        
             );
             services.AddTransient<IItemRepository, EFItemRepository>();

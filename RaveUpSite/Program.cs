@@ -20,6 +20,8 @@ namespace RaveUpSite
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
+                .ConfigureAppConfiguration(builder =>
+                    builder.AddJsonFile("appsettings.json"))
                 .Build();
     }
 }

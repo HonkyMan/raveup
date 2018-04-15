@@ -1,9 +1,62 @@
 ﻿@model IEnumerable<Item>
-@foreach (var i in Model)
-{
-    <div>
-        <h3>@i.Name</h3>
-        @i.Description
-        <h4>@i.Square</h4>
-    </div>
-}
+
+
+<div class="container cat">
+    <div class="divider"></div>
+    <h1>КАТАЛОГ КОТТЕДЖЕЙ</h1>
+    @*<div class="container cat-filter margin">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <div class="col-sm-2">
+                    <select name="city[]" class="form-control" id="">
+                        <option value="kzn">Казань</option>
+                        <option value="zl">Зеленодольск</option>
+                        <option value="chl">Челны</option>
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <select name="region[]" class="form-control" id="">
+                        <option value="Priv">Приволжский</option>
+                        <option value="Sov">Советский</option>
+                        <option value="Vah">Вахитовский</option>
+                        <option value="Nov">Ново-Савиновский</option>
+                        <option value="Msc">Московский</option>
+                        <option value="Kir">Кировский</option>
+                        <option value="Avi">Авиостроительный</option>
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <select name="floor[]" class="form-control" id="">
+                        <option value="1">1 этаж</option>
+                        <option value="2">2 этажа</option>
+                        <option value="3">3 этажа</option>
+                    </select>
+                </div>
+                <div class="col-sm-4">
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox1" value="option1"> Баня
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox1" value="option1"> Бассейн
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox1" value="option1"> Бильярд
+                    </label>
+                </div>
+            </div>
+        </form>
+    </div>*@
+
+    @foreach (var i in Model)
+    {
+        <div class="col-xs-12 col-sm-4 col-md-3 thumbnail">
+            <img src="http://via.placeholder.com/450x350/212121" alt="" class="cat-img">
+            <h2 class="cat-name">@i.Name</h2>
+            <p class="cat-desc">@i.Description</p>
+        </div>
+    }
+
+
+</div>
+
+
