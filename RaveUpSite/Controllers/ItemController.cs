@@ -14,6 +14,11 @@ namespace RaveUpSite.Controllers
         public ItemController(IItemRepository repo)
         {
             repository = repo;
+            Initialize();
+        }
+        private void Initialize()
+        {
+            ViewBag.ControllerName = "Item";
         }
 
         public ViewResult List() => View(repository.Items);

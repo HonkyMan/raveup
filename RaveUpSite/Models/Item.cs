@@ -19,5 +19,7 @@ namespace RaveUpSite.Models
         public bool HasPool { get; set; } = false;
         public bool HasBathhouse { get; set; } = false;
         public int FloorsCount { get; set; } = 1;
+        public DateTime CreatedDate { get; set; } = DateTime.Now;
+        public double Rating { get; set; }
     }
 }
