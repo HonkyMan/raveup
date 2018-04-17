@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css">
     <link rel="stylesheet" href="style/style.css">
-    <title>РЕГИСТРАЦИЯ НА RAVE-UP</title>
+    <title>КАТАЛОГ </title>
 </head>
 <body>
     <header class="">
@@ -16,46 +17,46 @@
                 <a href="" class="btn">Регистрация</a>
             </div>
             <div class="right-side">
-                <a href="email:" class="btn email-link"><i class="fa fa-envelope" aria-hidden="true"></i> info@rave-up.ru</a>
+                <a href="email:" class="btn email-link"><i class="fa fa-envelope-o" aria-hidden="true"></i> info@rave-up.ru</a>
                 <a href="tel:" class="btn phone-link"><i class="fa fa-phone" aria-hidden="true"></i> +7 800 555 35 35</a>
             </div>
         </div>
         <div class="container">
             <nav class="navbar navbar-default">
                 <div class="container-fluid">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
+                  <!-- Brand and toggle get grouped for better mobile display -->
+                  <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
                     </button>
                     <div class="container-f luid">
                         <a class="navbar-brand" href="#">
                             <img alt="Brand" class="height-img-responsive" src="http://via.placeholder.com/350x150/212121">
                         </a>
                     </div>
-                    </div>
-                
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  </div>
+              
+                  <!-- Collect the nav links, forms, and other content for toggling -->
+                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li><a href="#">ГЛАВНАЯ<span class="sr-only">(current)</span></a></li>
-                        <li class="dropdown">
+                      <li><a href="#">ГЛАВНАЯ<span class="sr-only">(current)</span></a></li>
+                      <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">КАТАЛОГ<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">One more separated link</a></li>
+                          <li><a href="#">Action</a></li>
+                          <li><a href="#">Another action</a></li>
+                          <li><a href="#">Something else here</a></li>
+                          <li role="separator" class="divider"></li>
+                          <li><a href="#">Separated link</a></li>
+                          <li role="separator" class="divider"></li>
+                          <li><a href="#">One more separated link</a></li>
                         </ul>
-                        </li>
-                        <li><a href="#">СТАТЬИ</a></li>
-                        <li class="active"><a href="#">О НАС</a></li>
+                      </li>
+                      <li><a href="#">СТАТЬИ</a></li>
+                      <li><a href="#">О НАС</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <form class="navbar-form navbar-left">
@@ -65,9 +66,9 @@
                             <button type="submit" class="btn btn-default">Submit</button>
                         </form>
                     </ul>
-                    </div><!-- /.navbar-collapse -->
+                  </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
-                </nav>
+              </nav>
         </div>
         <!-- <div class="slider">
             <div class="slider-img-box">
@@ -77,142 +78,56 @@
         </div> -->
     </header>
 
-    <div class="container form">
-        <h2>Регистрация</h2>
-        <br>
-        <form class="form-horizontal">
-            <div class="form-group">
-                <div class="col-xs-12">
-                    <input type="text" class="form-control" id="lastName" placeholder="Введите фамилию">
+    <div class="container-fluid item_page">
+        <div class="col-md-5 item-photos">
+            <div class="thumbnail">
+                <div class="main-item-photo">
+                    <a href="http://via.placeholder.com/1920x1080/212121" title="" id="item-bottom-img-main-a" data-fancybox="gallery">
+                        <img src="http://via.placeholder.com/1920x1080/212121" title="" alt="" id="item-bottom-img-main" class=" img-responsive">
+                    </a>
+                </div>
+                <div class="item-photos-bottom">
+                    <center>
+                    <ul class="item-photos-bottom-ul">
+                        
+                    </ul>
+                    </center>
                 </div>
             </div>
-            <div class="form-group">
-                <div class="col-xs-12">
-                    <input type="text" class="form-control" id="firstName" placeholder="Введите имя">
+        </div>
+        <div class="col-md-7 item_page-content">
+            <center><h1>Коттедж MOON</h1></center>
+            <h4><strong>Артикул: </strong> 500004</h4>
+            <h4><strong>Цена: </strong>48 000 руб.</h4>
+            <button class="btn btn-warning" id="cat-make-order">ЗАКАЗАТЬ</button>
+            <!-- HTML-код модального окна -->
+            <div id="myModalBox" class="modal fade" style="display: none;">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                    <!-- Заголовок модального окна -->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title">Оформить заказ</h4>
+                    </div>
+                    <!-- Основное содержимое модального окна -->
+                        <form class="modalForm wow fadeIn" action="katalog/komplecty/barneo" method="POST" style="visibility: visible; animation-name: fadeIn;">
+                            <div class="modal-body form-group">                                
+                                <p><img src="http://via.placeholder.com/1920x1080/212121" width="50px" alt=""><span>Коттедж MOON</span></p>
+                                <input name="tovar" type="hidden" value="#TOVAR#">
+                                <input class="make_order-name form-control" name="name" type="text" placeholder="Имя" required="">
+                                <input class="make_order-tel form-control" name="tel" type="tel" placeholder="Телефоа" id="phone" required="">
+                                <textarea class="form-control" name="message" id="" rows="5" resize="none" placeholder="Текст сообщения" required=""></textarea>
+                            </div>
+                            <div class="modal-footer">
+                                <input type="submit" class="submit make_order-submit" value="ЗАКАЗАТЬ">
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-            <div class="form-group">
-                <div class="col-xs-12">
-                    <input type="text" class="form-control" id="fatherName" placeholder="Введите отчество">
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-xs-4">
-                    <select class="form-control">
-                        <option>Дата</option>
-                        <option value="">1</option>
-                        <option value="">2</option>
-                        <option value="">3</option>
-                        <option value="">4</option>
-                        <option value="">5</option>
-                        <option value="">6</option>
-                        <option value="">7</option>
-                        <option value="">8</option>
-                        <option value="">9</option>
-                        <option value="">10</option>
-                        <option value="">11</option>
-                        <option value="">12</option>
-                        <option value="">13</option>
-                        <option value="">14</option>
-                        <option value="">15</option>
-                        <option value="">16</option>
-                        <option value="">17</option>
-                        <option value="">18</option>
-                        <option value="">19</option>
-                        <option value="">20</option>
-                        <option value="">21</option>
-                        <option value="">22</option>
-                        <option value="">23</option>
-                        <option value="">24</option>
-                        <option value="">25</option>
-                        <option value="">26</option>
-                        <option value="">27</option>
-                        <option value="">28</option>
-                        <option value="">29</option>
-                        <option value="">30</option>
-                        <option value="">31</option>
-                    </select>
-                </div>
-                <div class="col-xs-4">
-                    <select class="form-control">
-                        <option>Месяц</option>
-                        <option value="">1</option>
-                        <option value="">2</option>
-                        <option value="">3</option>
-                        <option value="">4</option>
-                        <option value="">5</option>
-                        <option value="">6</option>
-                        <option value="">7</option>
-                        <option value="">8</option>
-                        <option value="">9</option>
-                        <option value="">10</option>
-                        <option value="">11</option>
-                        <option value="">12</option>
-                    </select>
-                </div>
-                <div class="col-xs-4">
-                    <select class="form-control">
-                        <option>Год</option>
-                        <option value="">1995</option>
-                        <option value="">1996</option>
-                        <option value="">1997</option>
-                        <option value="">1998</option>
-                        <option value="">1999</option>   
-                    </select>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-xs-12">
-                    <input type="email" class="form-control" id="inputEmail" placeholder="Email">
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-xs-12">
-                    <input type="password" class="form-control" id="inputPassword" placeholder="Введите пароль">
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-xs-12">
-                    <input type="password" class="form-control" id="confirmPassword" placeholder="Введите пароль ещё раз">
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-xs-12">
-                    <input type="tel" class="form-control" id="phoneNumber" placeholder="Введите номер телефона">
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-xs-12">
-                    <textarea rows="3" class="form-control" id="postalAddress" placeholder="Введите адрес"></textarea>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-xs-2">
-                    <label class="radio-inline">
-                        <input type="radio" name="genderRadios" value="male"> Мужской
-                    </label>
-                </div>
-                <div class="col-xs-2">
-                    <label class="radio-inline">
-                        <input type="radio" name="genderRadios" value="female"> Женский
-                    </label>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-xs-12">
-                    <label class="checkbox-inline">
-                        <input type="checkbox" value="agree">  Я согласен с <a href="#">условиями</a>.
-                    </label>
-                </div>
-            </div>
-            <br />
-            <div class="form-group">
-                <div class="col-xs-offset-4 col-xs-12">
-                    <input type="submit" class="btn btn-primary" value="Регистрация">
-                    <input type="reset" class="btn btn-default" value="Очистить форму">
-                </div>
-            </div>
-        </form>
+            <h4>Описание:</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus aut earum dignissimos quis consectetur dolorem omnis molestias! Aut doloremque officia deleniti molestiae. Sit nostrum perferendis ipsam aperiam sunt corrupti quos!<br></p>            
+        </div>   
     </div>
 
     <footer class="margin">
@@ -377,7 +292,8 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
-    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>  
-    
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.js"></script> 
+    <script src="script/script.js"></script>
 </body>
 </html>

@@ -152,7 +152,9 @@ footer{
     background-color: #1a1a1a;
 }
 /*end footer*/
+/*item*/
 
+/*end item*/
 @media (min-width:  992px){
     .slider-blur, .slider{
         height: calc(100vh - 72px - 50px);
