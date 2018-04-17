@@ -44,7 +44,7 @@ namespace RaveUpSite
                 {
                     routes.MapRoute(
                         name: "default",
-                        template: "{controller=Item}/{action=List}/{id?}");
+                        template: "{controller=Main}/{action=Main}");
                 }
             );
             SeedData.EnsurePopulated(app);
