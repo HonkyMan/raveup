@@ -31,6 +31,7 @@ namespace RaveUpSite.Models
                     editedItem.RoomCount = item.RoomCount;
                     editedItem.HasBathhouse = item.HasBathhouse;
                     editedItem.HasPool = item.HasPool;
+                    editedItem.Name = item.Name;
                 }
 
             }

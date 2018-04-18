@@ -2,7 +2,7 @@
 
 <form asp-action="Edit" method="post">
     <div class="container">
-        <input type="hidden" asp-for="ItemID"/>
+        <input type="hidden" asp-for="ItemID" />
         <center>
             <h1>Картинка</h1>
             <img src="http://via.placeholder.com/620x450/212121" class="img-responsive" alt="">
@@ -10,12 +10,18 @@
         <br>
         <br>
         <center>
+            <h1>Название</h1>
+            <input type="text" asp-for="Name" value="@Model.Name">
+        </center>
+        <br><br>
+        <center>
             <h1>Описание</h1>
         </center>
         <textarea style="width: 100%;resize: none; height: 100px;" value="@Model.Description" asp-for="Description">
         
         </textarea>
         <br><br>
+
         <center>
             <h1>Площадь</h1>
             <input type="text" asp-for="Square" value="@Model.Square">
