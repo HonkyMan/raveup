@@ -13,7 +13,7 @@
 <div class="container range padding">
     @foreach (var item in Model.NewItems)
     {
-        <div class="col-sm-3 range-block">
+        <div class="col-sm-3 range-block" onclick="location.href='@(Url.Action("GetOne", "Item")+"?itemId="+item.ItemID.ToString())'">
             <div class="thumbnail">
                 <img src="http://via.placeholder.com/350x150/212121" alt="" class="img-responsive">
                 <p class="range-header font font-center">@item.Name</p>
@@ -32,7 +32,7 @@
         <h2 class="font-center">ПОПУЛЯРНОЕ</h2><br>
         @foreach (var item in Model.TopRatedItems)
         {
-            <div class="col-xxs-12 col-md-3 col-sm-3 col-xs-6 wow flipInX panel panel-default" style="visibility: visible; animation-name: flipInX;">
+            <div class="col-xxs-12 col-md-3 col-sm-3 col-xs-6 wow flipInX panel panel-default" style="visibility: visible; animation-name: flipInX;" onclick="location.href='@(Url.Action("GetOne","Item")+"?itemId="+item.ItemID.ToString())'">
                 <div class="panel-body my_thumbnail" onclick="window.location='katalog/komplecty/komplekt-avellino'">
                     <img class=" img-responsive" src="http://via.placeholder.com/1200x1080/212121" title="@item.Name" alt="@item.Name">
                     <center><h4 class="items-name">@item.Name</h4></center>

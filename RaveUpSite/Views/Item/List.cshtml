@@ -49,7 +49,7 @@
 
     @foreach (var i in Model)
     {
-        <div class="col-xs-12 col-sm-4 col-md-3 thumbnail">
+        <div class="col-xs-12 col-sm-4 col-md-3 thumbnail" onclick="location.href='@(Url.Action("GetOne")+"?itemId="+i.ItemID.ToString())'">
             <img src="http://via.placeholder.com/450x350/212121" alt="" class="cat-img">
             <h2 class="cat-name">@i.Name</h2>
             <p class="cat-desc">@i.Description</p>

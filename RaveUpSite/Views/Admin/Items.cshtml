@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Item>
+
+<div class="container">
+    <h2>Таблица товаров</h2>
+    <p>Таблица коттеджей из каталога:</p>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                @*<th><input type="checkbox" id="main-cb"></th>*@
+                <th>Картинка</th>
+                <th>Название</th>
+                <th>Описание</th>
+                <th>Площадь</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        @foreach(var i in Model)
+        {
+            <tr>
+                @*<td><input type="checkbox" id="child-cb"></td>*@
+                <td><img src="http://via.placeholder.com/150x100/212121" alt="" class="img-responsive"></td>
+                <td>@i.Name</td>
+                <td>@i.Description</td>
+                <td>@i.Square</td>
+                <td>
+                    <p><a asp-action="Delete" asp-route-itemId ="@i.ItemID" class="btn btn-danger btn-sm">Удалить</a></p>
+                    <p><a asp-action="Edit" asp-route-itemId ="@i.ItemID"  class="btn btn-primary btn-sm">Изменить</a></p>
+                </td>
+            </tr>
+
+        }               
+            
+      
+        </tbody>
+        @*<button type="button" class="btn btn-danger btn-sm">Удалить выделенное</button>*@
+        <a asp-action="Create" class="btn btn-primary btn-sm" >Добавить коттедж</a>
+    </table>
+</div>
+

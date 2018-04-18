@@ -12,8 +12,15 @@
     <header class="">
         <div class="container top-header">
             <div class="left-side">
-                <a href="" class="btn">Войти</a>
-                <a href="" class="btn">Регистрация</a>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <p>Здравствуйте, @(User.Identity.Name)<a asp-controller="Account" asp-action="Logout" class="btn">Выйти</a></p>
+                    
+                }
+                else
+                {
+                    <a asp-controller="Account" asp-action="Login" class="btn">Войти</a>
+                }
             </div>
             <div class="right-side">
                 <a href="email:" class="btn email-link"><i class="fa fa-envelope-o" aria-hidden="true"></i> info@rave-up.ru</a>
@@ -45,17 +52,22 @@
                             <li class="dropdown">
                                 <a a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >КАТАЛОГ<span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a asp-controller="Item" asp-action="List">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
+                                    <li><a asp-controller="Item" asp-action="List">Показать</a></li>
+                                    @if (User.Identity.IsAuthenticated)
+                                    {
+                                        <li><a asp-controller="Admin" asp-action="Items">Админ каталог</a></li>
+
+                                    }
+                                
+                                    @*<li><a href="#">Something else here</a></li>
                                     <li role="separator" class="divider"></li>
                                     <li><a href="#">Separated link</a></li>
                                     <li role="separator" class="divider"></li>
-                                    <li><a href="#">One more separated link</a></li>
+                                    <li><a href="#">One more separated link</a></li>*@
                                 </ul>
                             </li>
                             <li><a href="#">СТАТЬИ</a></li>
-                            <li><a href="#">О НАС</a></li>
+                            <li><a asp-controller="AboutUs" asp-action="About">О НАС</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
                             <form class="navbar-form navbar-left">
@@ -87,7 +99,7 @@
                         <li><a href="mailto:info@romardi.com">info@romardi.com&nbsp;<i class="fa fa-share" aria-hidden="true"></i></a></li>
                     </ul>
                 </div>
-                <div class="col-xs-12 col-sm-4 footer_main_img"><img src="images/logo.png" class="footer_1-img img-responsive" alt="RAVE-UP"></div>
+                <div class="col-xs-12 col-sm-4 footer_main_img"><img src=@Url.Content("~/images/logo.png") class="footer_1-img img-responsive" alt="RAVE-UP"></div>
                 <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
                     <a href="kontaktyi" class="footer-contact-btn">Контакты</a>
                 </div>

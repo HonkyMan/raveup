@@ -1,0 +1,52 @@
+﻿@model Item
+
+
+<div class="container-fluid item_page">
+    <div class="col-md-5 item-photos">
+        <div class="thumbnail">
+            <div class="main-item-photo">
+                <a href="http://via.placeholder.com/1920x1080/212121" title="" id="item-bottom-img-main-a" data-fancybox="gallery">
+                    <img src="http://via.placeholder.com/1920x1080/212121" title="" alt="" id="item-bottom-img-main" class=" img-responsive">
+                </a>
+            </div>
+            <div class="item-photos-bottom">
+                <center>
+                    <ul class="item-photos-bottom-ul"></ul>
+                </center>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-7 item_page-content">
+        <center><h1>Коттедж @Model.Name</h1></center>
+        <h4><strong>Артикул: </strong> @Model.ItemID</h4>
+        <h4><strong>Цена: </strong>48 000 руб.</h4>
+        <button class="btn btn-warning" id="cat-make-order">ЗАКАЗАТЬ</button>
+        <!-- HTML-код модального окна -->
+        <div id="myModalBox" class="modal fade" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Заголовок модального окна -->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title">Оформить заказ</h4>
+                    </div>
+                    <!-- Основное содержимое модального окна -->
+                    <form class="modalForm wow fadeIn" action="katalog/komplecty/barneo" method="POST" style="visibility: visible; animation-name: fadeIn;">
+                        <div class="modal-body form-group">
+                            <p><img src="http://via.placeholder.com/1920x1080/212121" width="50px" alt=""><span>Коттедж MOON</span></p>
+                            <input name="tovar" type="hidden" value="#TOVAR#">
+                            <input class="make_order-name form-control" name="name" type="text" placeholder="Имя" required="">
+                            <input class="make_order-tel form-control" name="tel" type="tel" placeholder="Телефоа" id="phone" required="">
+                            <textarea class="form-control" name="message" id="" rows="5" resize="none" placeholder="Текст сообщения" required=""></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="submit" class="submit make_order-submit" value="ЗАКАЗАТЬ">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <h4>Описание:</h4>
+        <p>@Model.Description<br></p>
+    </div>
+</div>

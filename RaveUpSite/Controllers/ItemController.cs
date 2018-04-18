@@ -23,6 +23,8 @@ namespace RaveUpSite.Controllers
 
         public ViewResult List() => View(repository.Items);
 
+        public ViewResult GetOne(int itemId) => View(repository.Items.FirstOrDefault(i => i.ItemID == itemId));
+
 
     }
 }

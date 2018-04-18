@@ -9,6 +9,8 @@ using Microsoft.Extensions.DependencyInjection;
 using RaveUpSite.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace RaveUpSite
 {
@@ -30,6 +32,13 @@ namespace RaveUpSite
                     configuration["Data:RaveUp:ConnectionString"])
                        
             );
+            services.AddDbContext<AppIdentityDbContext>(options =>
+                options.UseSqlServer(
+                    configuration["Data:RaveUpIdentity:ConnectionString"])
+
+            );
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<AppIdentityDbContext>();
             services.AddTransient<IItemRepository, EFItemRepository>();
             services.AddMvc();
         }
@@ -40,6 +49,7 @@ namespace RaveUpSite
             app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
             app.UseStaticFiles();
+            app.UseAuthentication();
             app.UseMvc(routes =>
                 {
                     routes.MapRoute(
@@ -48,6 +58,7 @@ namespace RaveUpSite
                 }
             );
             SeedData.EnsurePopulated(app);
+            IdentitySeedData.EnsurePopulated(app);
         }
     }
 }

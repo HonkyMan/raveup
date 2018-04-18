@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace RaveUpSite.Models
 {
-    public class FakeItemRepository : IItemRepository
+    public class FakeItemRepository /*:/* IItemRepository*/
     {
         public IEnumerable<Item> Items => new List<Item>
         {

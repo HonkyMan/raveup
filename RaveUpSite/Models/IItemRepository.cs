@@ -8,5 +8,11 @@ namespace RaveUpSite.Models
     public interface IItemRepository
     {
         IEnumerable<Item> Items { get; }
+
+        void SaveItem(Item item);
+
+        void CreateItem(Item item);
+
+        void DeleteItem(int itemID);
     }
 }

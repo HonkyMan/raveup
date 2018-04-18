@@ -1,0 +1,42 @@
+﻿@model Item
+
+<form asp-action="Edit" method="post">
+    <div class="container">
+        <input type="hidden" asp-for="ItemID"/>
+        <center>
+            <h1>Картинка</h1>
+            <img src="http://via.placeholder.com/620x450/212121" class="img-responsive" alt="">
+        </center>
+        <br>
+        <br>
+        <center>
+            <h1>Описание</h1>
+        </center>
+        <textarea style="width: 100%;resize: none; height: 100px;" value="@Model.Description" asp-for="Description">
+        
+        </textarea>
+        <br><br>
+        <center>
+            <h1>Площадь</h1>
+            <input type="text" asp-for="Square" value="@Model.Square">
+        </center>
+        <br><br>
+        <center>
+            <h1>Количество комнат</h1>
+            <input type="text" asp-for="RoomCount" value="@Model.RoomCount">
+        </center>
+        <br><br>
+        <center>
+            <h1>Баня</h1>
+            <input type="checkbox" checked asp-for="HasBathhouse" value="@Model.HasBathhouse">
+        </center>
+        <center>
+            <h1>Бассейн</h1>
+            <input type="checkbox" checked asp-for="HasPool" value="@Model.HasPool">
+        </center>
+        <center>
+            <button type="submit" class="btn btn-success btn-sm">СОХРАНИТЬ</button>
+            <a asp-action="Items" class="btn btn-danger btn-sm">ВЫЙТИ</a>
+        </center>
+    </div>
+</form>
