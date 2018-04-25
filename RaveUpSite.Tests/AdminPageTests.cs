@@ -22,13 +22,15 @@ namespace RaveUpSite.Tests
                 {
                     new Item { ItemID = 1, Address = "Kazan", Description = "coollest", Name = "FairyTail", RoomCount = 10, Square = 200.0, Rating = 5.0, CreatedDate = DateTime.Now.AddHours(-2) },
                     new Item { ItemID = 2, Address = "Chistopol", Description = "amazing", Name = "Moon", RoomCount = 12, Square = 160.3, Rating = 4.9, CreatedDate = DateTime.Now.AddHours(-1)  },
-                    new Item { ItemID = 3,Address = "Kazan", Description = "fckin good", Name = "Sun", RoomCount = 8, Square = 180.0, Rating = 4.7 },
-                    new Item { ItemID = 4,Address = "Kazan", Description = "beatiful", Name = "Ibiza", RoomCount = 16, Square = 260, Rating = 4.8,  CreatedDate = DateTime.Now.AddHours(-4) },
-                    new Item { ItemID = 5,Address = "Kazan", Description = "greatest", Name = "Belgia", RoomCount = 13, Square = 100, Rating = 4.6, CreatedDate = DateTime.Now.AddHours(-3) }
+                    new Item { ItemID = 3, Address = "Kazan", Description = "fckin good", Name = "Sun", RoomCount = 8, Square = 180.0, Rating = 4.7 },
+                    new Item { ItemID = 4, Address = "Kazan", Description = "beatiful", Name = "Ibiza", RoomCount = 16, Square = 260, Rating = 4.8,  CreatedDate = DateTime.Now.AddHours(-4) },
+                    new Item { ItemID = 5, Address = "Kazan", Description = "greatest", Name = "Belgia", RoomCount = 13, Square = 100, Rating = 4.6, CreatedDate = DateTime.Now.AddHours(-3) }
                 });
 
             AdminController cont = new AdminController(mock.Object);
             Item[] items = (cont.Items().ViewData.Model as IEnumerable<Item>).ToArray();
+
+
             Assert.Equal(1, items[0].ItemID);
             Assert.Equal(2, items[1].ItemID);
             Assert.Equal(3, items[2].ItemID);
@@ -51,6 +53,7 @@ namespace RaveUpSite.Tests
 
             AdminController cont = new AdminController(mock.Object);
             Item item = cont.Edit(1).ViewData.Model as Item;
+
             Assert.Equal(1, item.ItemID);
             
         }
